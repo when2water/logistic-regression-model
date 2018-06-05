@@ -18,8 +18,9 @@ include_once "hitCount.php";
 
 // Zip code verification function
 function verifyZip($zip) {
-	$ch = curl_init("signal.when2water.org/zipVerify.php?zip=" . $zip);
+	$ch = curl_init("https://api.when2water.org/zipVerify.php?zip=" . $zip);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	$verify = curl_exec($ch);
 	curl_close($ch);
 	if ($verify === "0") {
