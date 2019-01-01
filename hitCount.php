@@ -1,7 +1,7 @@
 <?php
 
 function pageCount() {
-	$counter_name = "/data" . "/APIcalls.txt";
+	$counter_name = getenv("DATA_LOCATION") . "/APIcalls.txt";
 	
 	// Check if a text file exists. If not create one and initialize it to zero.
 	if (!file_exists($counter_name)) {
