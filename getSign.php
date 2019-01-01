@@ -16,9 +16,9 @@ $fTimes = $predictionData[0];
 // var_dump($predictionData);
 
 // Read any stored historical data into correct format
-$fName = dirname(__FILE__) . "/wData/$zip.txt";
+$fName = "/data" . "/$zip.txt";
 if (!file_exists($fName)) {
-	$zipReg = fopen(dirname(__FILE__) . "/zips.txt", "a+");
+	$zipReg = fopen("/data" . "/zips.txt", "a+");
 	fwrite($zipReg, "$zip\n");
 	fclose($zipReg);
 }

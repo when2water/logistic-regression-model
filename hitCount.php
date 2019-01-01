@@ -1,7 +1,7 @@
 <?php
 
 function pageCount() {
-	$counter_name = dirname(__FILE__) . "/APIcalls.txt";
+	$counter_name = "/data" . "/APIcalls.txt";
 	
 	// Check if a text file exists. If not create one and initialize it to zero.
 	if (!file_exists($counter_name)) {
